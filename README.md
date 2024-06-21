@@ -2,7 +2,7 @@
 
 ## Overview
 
-As a chess enthusiast, I've lost many games because I didn't pay attention to the clock and ran out of time. This frustration led me to develop a solution: a Chrome extension for chess.com that checks your remaining time and alerts you when you have 10 seconds left. The extension plays a sound of your choice and darkens the page, highlighting the board to help you focus (focus mode) until the game ends, after which it returns the page to normal.
+As a chess enthusiast, I've lost many games because I didn't pay attention to the clock and ran out of time. This frustration led me to develop a solution: a Chrome extension for chess.com that checks your remaining time and alerts you when you have 10 seconds left. The extension plays a sound of your choice and darkens the page, highlighting the board to help you focus until the game ends, after which it returns the page to normal.
 
 ## Features
 
