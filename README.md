@@ -37,5 +37,7 @@ The usage of this extension is highly personalized and based on individual prefe
 
 Here's a video demonstrating the extension in action:
 
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/964710184?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Chess-Time-Alert-Example (Copy)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
 ![Example Video](path_to_example_video.mp4)
 
