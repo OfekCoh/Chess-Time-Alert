@@ -3,7 +3,8 @@ function playSound() {
     const audio = new Audio(chrome.runtime.getURL('sound.mp3'));
     audio.play();
 }
-let soundCooldown= false;  // make sure the sound doesnt play doubled
+
+let overlayOn= false;  // make sure the sound and overlay only apply once per game
 
 function createShadyOverlay(element) {
     // Create the overlay element
@@ -12,7 +13,7 @@ function createShadyOverlay(element) {
     document.body.appendChild(overlay);
 
     element.style.position = 'relative';
-    element.style.zIndex = '10000';
+    element.style.zIndex = '10000';   // makes the board exluded from overlay
 
     // Add CSS for the overlay
     const style = document.createElement('style');
@@ -45,6 +46,8 @@ function createShadyOverlay(element) {
         if(gameEnded){
             const rating= gameEnded.textContent.trim();
             overlay.classList.remove('active');
+            overlayOn=false;
+            element.style.zIndex = '';   // return board to its initial z-index
             clearInterval(intervalId);
         }
     },2000);
@@ -56,14 +59,11 @@ function checkClock(clockElement) {
     const minutes = parseInt(time[0],10);
     const seconds = parseInt(time[1], 10);
 
-    if (!soundCooldown && minutes==0 && seconds == 10) {
+    if (!overlayOn && minutes==0 && seconds == 10) {
         playSound();
         const chosenElement = document.querySelector("#board-layout-main");
         createShadyOverlay(chosenElement);
-        soundCooldown = true;
-        setTimeout(() => {
-            soundCooldown = false;
-        }, 7000);  // 7 seconds cooldown
+        overlayOn = true;
     } 
 } 
 
