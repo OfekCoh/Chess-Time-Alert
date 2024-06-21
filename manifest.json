@@ -1,0 +1,25 @@
+{
+    "name": "Chess Clock Warning",
+    "version": "1.0.0",
+    "description": "Reads your last seconds out loud on chess.com",
+    "manifest_version": 3,
+    "author": "Ofek Cohen",
+    "action":{
+        "default_title": "Low Time Warning"
+    },
+    "permissions": [   
+      "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://www.chess.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["sound.mp3"],
+        "matches": ["https://www.chess.com/*"]
+      }
+    ]
+}
