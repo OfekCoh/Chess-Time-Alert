@@ -33,7 +33,3 @@ The usage of this extension is highly personalized and based on individual prefe
 3. **Alert Activation**: The extension will monitor your clock. When your remaining time reaches 10 seconds, it will play the alert sound and activate focus mode.
 4. **Customizing the Sound**: To change the alert sound, replace the `path_to_sound_file.mp3` in the script with the path to your desired sound file.
 
-## Example
-
-Here's a video demonstrating the extension in action:  https://vimeo.com/964718976?share=copy
-
